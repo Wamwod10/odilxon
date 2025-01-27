@@ -1,39 +1,214 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "../media.scss";
 
 .nav {
-    width: 100%;
-    height: 80px;
-    background: #000;
+  width: 100%;
+  height: 80px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+
+  &__box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+  }
 
-    &__box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px 0 20px;
+  &__logo {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "arvo";
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    flex-wrap: wrap;
+
+    @include media(1024) {
+      column-gap: 25px;
     }
 
-    &__logo {
-        font-size: 28px;
-        font-weight: 700;
-        font-family: "arvo";
+    @include media(900) {
+      column-gap: 15px;
     }
 
-    &__list {
-        display: flex;
-        align-items: center;
-        column-gap: 40px;
-        flex-wrap: wrap;
+    @include media(855) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 30px;
+      background-color: rgb(42, 42, 42);
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: all 0.8s ease;
+      position: fixed;
+      z-index: 999;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &.active {
+        top: 50%;
+        transition: 0.8s;
+      }
     }
 
-    &__link {
-        font-size: 18px;
-        font-weight: 400;
-        transition: 0.3s;
-
-        &:hover {
-            color: #ff6600;
-        }
+    @include media(425) {
+      padding: 20px;
+      max-width: 250px;
     }
+
+    @include media(375) {
+      max-width: 220px;
+    }
+
+    @include media(320) {
+      max-width: 200px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.3s;
+
+    &:hover {
+      color: #ff6600;
+    }
+  }
+
+  &__menu-box {
+    width: 25px;
+    height: 18px;
+    margin-right: 15px;
+    display: none;
+    margin-top: 15px;
+
+    @include media(855) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    margin-right: 15px;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    display: none;
+
+    @include media(855) {
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      top: 8px;
+      transition: 0.5s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      top: -8px;
+      transition: 0.5s ease-in-out;
+    }
+
+    &.open {
+      height: 0;
+
+      &::before {
+        top: 0;
+        transform: rotate(230deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-230deg);
+      }
+    }
+  }
+}
+
+// Media queries for different screen sizes
+@include media(1440) {
+  .nav {
+    font-size: 20px;
+  }
+}
+
+@include media(1024) {
+  .nav__box {
+    padding: 0 15px;
+  }
+
+  .nav__logo {
+    font-size: 28px;
+  }
+
+  .nav__list {
+    column-gap: 30px;
+  }
+}
+
+@include media(953) {
+    .nav__list {
+        column-gap: 15px;
+    }
+} 
+
+@include media(768) {
+  .nav__box {
+    padding: 0 10px;
+  }
+
+  .nav__list {
+    column-gap: 20px;
+  }
+}
+
+@include media(425) {
+  .nav__box {
+    padding: 0 5px;
+  }
+
+  .nav__list {
+    column-gap: 15px;
+  }
+}
+
+@include media(375) {
+  .nav__box {
+    padding: 0 5px;
+  }
+
+  .nav__list {
+    column-gap: 12px;
+  }
+}
+
+@include media(320) {
+  .nav__box {
+    padding: 0 5px;
+  }
+
+  .nav__list {
+    column-gap: 10px;
+  }
 }

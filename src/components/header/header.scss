@@ -1,4 +1,5 @@
 @import 'animate.css';
+@import '/src/components/media.scss';
 
 .header {
   max-width: 1920px;
@@ -10,6 +11,40 @@
   text-align: center;
   padding: 0 20px;
   background: url(../../../public/2.png) no-repeat center center/cover;
+  position: relative;
+  z-index: -1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000057;
+  }
+
+  // @include media(1440) {
+  //   height: 80vh;
+  // }
+
+  @include media(1024) {
+    margin-top: -10px;
+  }
+
+  // @include media(768) {
+  //   height: 60vh;
+  // }
+
+  // @include media(425) {
+  //   height: 50vh;
+  // }
+
+  // @include media(375) {
+  //   height: 45vh;
+  // }
+
+  // @include media(320) {
+  //   height: 40vh;
+  // }
 }
 
 .header__box {
@@ -18,6 +53,22 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   animation: fadeIn 2s ease-in-out;
+
+  @include media(768) {
+    padding: 30px;
+  }
+
+  // @include media(425) {
+  //   padding: 20px;
+  // }
+
+  // @include media(375) {
+  //   padding: 15px;
+  // }
+
+  // @include media(320) {
+  //   padding: 10px;
+  // }
 }
 
 .header__title {
@@ -31,6 +82,26 @@
   max-width: 810px;
   text-align: center;
   margin: 0 auto 20px auto;
+
+  @include media(1024) {
+    font-size: 2.5rem;
+  }
+
+  @include media(768) {
+    font-size: 2rem;
+  }
+
+  @include media(425) {
+    font-size: 1.5rem;
+  }
+
+  @include media(375) {
+    font-size: 1.3rem;
+  }
+
+  @include media(320) {
+    font-size: 1.2rem;
+  }
 }
 
 .header__text {
@@ -39,10 +110,39 @@
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
+
+  @include media(1024) {
+    font-size: 1.1rem;
+  }
+
+  @include media(768) {
+    font-size: 1rem;
+  }
+
+  @include media(425) {
+    font-size: 0.9rem;
+  }
+
+  @include media(375) {
+    font-size: 0.8rem;
+  }
+
+  @include media(320) {
+    font-size: 0.7rem;
+  }
 }
 
 .header__links {
   margin-top: 40px;
+
+  @include media(768) {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
 }
 
 .header__link {
@@ -54,11 +154,29 @@
   transition: all 0.3s ease;
   padding: 10px 50px;
   border: 2px solid rgb(255, 255, 255);
-}
 
-.header__link:hover {
-  color: #ff6600;
-  text-decoration: underline;
+  @include media(768) {
+    font-size: 1.1rem;
+    display: block;
+    min-width: 167px;
+  }
+
+  @include media(425) {
+    font-size: 1rem;
+  }
+
+  @include media(375) {
+    font-size: 0.9rem;
+  }
+
+  @include media(320) {
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    color: #ff6600;
+    text-decoration: underline;
+  }
 }
 
 @keyframes fadeIn {
