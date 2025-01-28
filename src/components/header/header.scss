@@ -14,13 +14,26 @@
   position: relative;
   z-index: -1;
 
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #00000057;
+    background: #00000097;
   }
+
+
 
   // @include media(1440) {
   //   height: 80vh;
@@ -48,14 +61,23 @@
 }
 
 .header__box {
-  background: rgba(0, 0, 0, 0.526);
+  background: url(/public/10.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   animation: fadeIn 2s ease-in-out;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include media(768) {
     padding: 30px;
+    // height: 100%;
+    background: none;
   }
 
   // @include media(425) {
@@ -82,6 +104,33 @@
   max-width: 810px;
   text-align: center;
   margin: 0 auto 20px auto;
+
+  span {
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(80, 80, 80);
+    line-height: 120%;
+    
+    @include media(1024) {
+      font-size: 2.5rem;
+    }
+  
+    @include media(768) {
+      font-size: 2rem;
+    }
+  
+    @include media(425) {
+      font-size: 1.5rem;
+    }
+  
+    @include media(375) {
+      font-size: 1.3rem;
+    }
+  
+    @include media(320) {
+      font-size: 1.2rem;
+    }
+  }
 
   @include media(1024) {
     font-size: 2.5rem;
@@ -152,6 +201,8 @@
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
   padding: 10px 50px;
   border: 2px solid rgb(255, 255, 255);
 

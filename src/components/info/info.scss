@@ -1,0 +1,23 @@
+.info {
+    width: 100%;
+    height: 100vh;
+    padding-top: 75px;
+    
+    &__title {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+    
+    &__txt {
+        font-size: 23px;
+        color: rgba(136, 136, 136, 0.828);
+        line-height: 32px;
+        margin-top: 25px;
+        
+        span {
+            font-weight: 700;
+            color: rgb(191, 191, 191);
+        } 
+    }
+}
