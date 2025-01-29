@@ -46,15 +46,35 @@
   padding: 40px;
   border-radius: 10px;
   animation: fadeIn 2s ease-in-out;
-  height: 70vh;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  @include media(1024) {
+    padding: 30px;
+    height: 500px;
+  }
+
   @include media(768) {
     padding: 30px;
-    background: none;
+    height: 400px;
+  }
+
+  @include media(425) {
+    padding: 30px;
+    height: 300px;
+  }
+
+  @include media(375) {
+    padding: 30px;
+    height: 250px;
+  }
+
+  @include media(325) {
+    padding: 30px;
+    height: 200px;
   }
 }
 
@@ -66,7 +86,7 @@
   text-transform: capitalize;
   letter-spacing: 2px;
   animation: zoomIn 2s ease-out;
-  max-width: 810px;
+  // max-width: 810px;
   text-align: center;
   margin: 0 auto 20px auto;
 
@@ -106,15 +126,16 @@
   }
 
   @include media(425) {
-    font-size: 1.5rem;
+    margin-bottom: 0px;
+    font-size: 1.1rem;
   }
 
   @include media(375) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   @include media(320) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -127,6 +148,7 @@
 
   @include media(1024) {
     font-size: 1.1rem;
+    animation: none;
   }
 
   @include media(768) {
@@ -135,6 +157,7 @@
 
   @include media(425) {
     font-size: 0.9rem;
+    display: none;
   }
 
   @include media(375) {
@@ -175,10 +198,13 @@
     font-size: 1.1rem;
     display: block;
     min-width: 167px;
+    // padding: 10px 10px;
   }
 
   @include media(425) {
     font-size: 1rem;
+    display: block;
+    min-width: 107px;
   }
 
   @include media(375) {

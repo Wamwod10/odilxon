@@ -1,12 +1,86 @@
+@import "/src/components/media.scss";
+
 .info {
     width: 100%;
     height: 100vh;
+    padding: 10px;
     padding-top: 75px;
+    
+    @include media(1440) {
+        padding-top: 80px;
+    }
+    
+    @include media(1024) {
+        padding-top: 70px;
+    }
+
+    @include media(768) {
+        padding-top: 60px;
+    }
+
+    @include media(425) {
+        padding-top: 50px;
+    }
+
+    @include media(375) {
+        padding-top: 40px;
+    }
+
+    @include media(325) {
+        padding-top: 30px;
+    }
+
+    img {
+        width: 500px;
+        margin-top: 25px;
+
+        @include media(1024) {
+            width: 450px;
+        }
+
+        @include media(768) {
+            width: calc(100% - 0px);
+        }
+
+        @include media(425) {
+            width: calc(100% - 0px);
+        }
+
+        @include media(375) {
+            width: calc(100% - 0px);
+        }
+
+        @include media(320) {
+            width: calc(100% - 0px);
+        }
+    }
 
     &__title {
         font-size: 35px;
         font-weight: 700;
         margin-bottom: 50px;
+        text-align: center;
+
+        @include media(1024) {
+            font-size: 30px;
+        }
+
+        @include media(768) {
+            font-size: 26px;
+        }
+
+        @include media(425) {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        @include media(375) {
+            font-size: 20px;
+        }
+
+        @include media(325) {
+            font-size: 18px;
+        }
     }
 
     &__txt {
@@ -14,6 +88,31 @@
         color: rgba(136, 136, 136, 0.828);
         line-height: 32px;
         margin-top: 25px;
+
+        @include media(1024) {
+            font-size: 21px;
+            line-height: 30px;
+        }
+
+        @include media(768) {
+            font-size: 19px;
+            line-height: 28px;
+        }
+
+        @include media(425) {
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        @include media(375) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @include media(325) {
+            font-size: 15px;
+            line-height: 22px;
+        }
 
         span {
             font-weight: 700;
