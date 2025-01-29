@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.scss';
-import 'animate.css'
+import 'animate.css';
 
 const Header = () => {
 
