@@ -4,6 +4,7 @@
     width: 100%;
     padding: 10px;
     padding-top: 75px;
+    overflow-x: hidden;
     
     @include media(1440) {
         padding-top: 80px;

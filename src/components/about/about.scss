@@ -7,9 +7,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+
+    @include media(1440) {
+        // margin-top: 100px;
+    }
 
     @include media(1024) {
-        width: 100%;
+        margin-top: 200px;
+    }
+
+    @include media(768) {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    @include media(425) {
+        padding: 30px 0;
+    }
+
+    @include media(375) {
+        padding: 20px 0;
+    }
+
+    @include media(320) {
+        padding: 10px 0;
     }
 
     & .container {
@@ -17,6 +39,11 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include media(1024) {
+            flex-direction: column;
+            row-gap: 50px;
+        }
     }
 
     &__box {
@@ -24,12 +51,26 @@
         flex-direction: column;
         align-items: center;
         row-gap: 50px;
+
+        @include media(1024) {
+
+        }
     }
 
     &__first-box {
         display: flex;
         align-items: center;
         column-gap: 60px;
+
+        @include media(768) {
+            // flex-direction: column;
+            row-gap: 20px;
+        }
+
+        @include media(750) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
     }
 
     &__line {
@@ -37,6 +78,15 @@
         height: 70px;
         background: #ad4500;
         border-radius: 10px;
+
+        @include media(768) {
+            height: 50px;
+        }
+
+        @include media(750) {
+            height: 50px;
+            transform: rotate(90deg);
+        }
     }
 
     &__div {
@@ -48,9 +98,56 @@
 
     &__txt {
         font-size: 20px;
-        letter-spacing: 0px;
         color: rgb(78, 78, 78);
         font-weight: 600;
+
+        @include media(425) {
+            font-size: 18px;
+        }
+    }
+
+    &__text {
+        font-size: 25px;
+        letter-spacing: 3px;
+        color: rgb(255, 255, 255);
+        font-weight: 900;
+
+        @include media(425) {
+            font-size: 22px;
+        }
+    }
+
+    img {
+        width: 500px;
+        border-radius: 30px;
+        border: 5px solid #4848483c;
+
+        @include media(768) {
+            width: 400px;
+        }
+
+        @include media(425) {
+            width: 350px;
+        }
+
+        @include media(375) {
+            width: 300px;
+        }
+
+        @include media(320) {
+            width: 280px;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        color: aliceblue;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        @include media(425) {
+            font-size: 30px;
+        }
     }
 
     .green {
@@ -69,23 +166,4 @@
         color: #747474;
     }
 
-    &__text {
-        font-size: 25px;
-        letter-spacing: 3px;
-        color: rgb(255, 255, 255);
-        font-weight: 900;
-    }
-
-    img {
-        width: 500px;
-        border-radius: 30px;
-        border: 5px solid #4848483c;
-    }
-
-    &__title {
-        font-size: 40px;
-        color: aliceblue;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
 }
