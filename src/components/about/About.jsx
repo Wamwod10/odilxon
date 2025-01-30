@@ -12,7 +12,7 @@ const About = () => {
     return (
         <div className='about'>
             <div className="container">
-                <div data-aos="fade-right" className="about__box">
+                <div className="about__box">
                     <h2 className="about__title">Odilxon Kamolov</h2>
                     <div className="about__first-box">
                         <div className="about__div">
@@ -62,7 +62,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <img data-aos="fade-left" src="12.jpg" alt="" />
+                <img src="12.jpg" alt="" />
             </div>
         </div>
     )
