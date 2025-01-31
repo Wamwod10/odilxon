@@ -19,7 +19,7 @@ const Header = () => {
           <p className="header__text animate__animated animate__fadeIn animate__delay-1s">
             Odilxon Kamolovning jang san'atidagi muvaffaqiyatlari, hayoti, g'alabalari va unga bo'lgan ilhomlantiruvchi yo'l haqida batafsil tanishing. Uning mashaqqatli mehnati va jasorati har bir jangda aks etadi.
           </p>
-          <div className="header__links animate__animated animate__fadeIn animate__delay-2s">
+          <div className="header__links animate__animated animate__fadeIn animate__delay-1s">
             <a href="#about" className="header__link">Ko'proq</a>
             <a href="#contact" className="header__link">Follow</a>
           </div>
