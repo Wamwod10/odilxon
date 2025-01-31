@@ -10,7 +10,7 @@ const Info = () => {
     }, []);
 
     return (
-        <div className="info">
+        <div id='info' className="info">
             <div className="container">
                 <div className="info__box">
                     <h2 className="info__title">Odilxon Kamolov — O'zbekistonlik Professional MMA Jangchisi</h2>

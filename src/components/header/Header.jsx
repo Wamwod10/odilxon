@@ -5,7 +5,7 @@ import 'animate.css';
 const Header = () => {
 
   return (
-    <div className="header">
+    <div id='header' className="header">
       {/* <video className='about__video' autoPlay muted loop>
         <source src="/public/progib.mp4" type="" />
       </video> */}

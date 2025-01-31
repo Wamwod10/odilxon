@@ -4,7 +4,8 @@ import "./components/media.scss";
 import Info from "./components/info/Info";
 import About from "./components/about/About";
 import Fight from "./components/fights/Fight";
-
+import Social from "./components/social/Social";
+import Footer from "./components/footer/Footer";
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
       <Info/>
       <About/>
       <Fight/>
+      <Social/>
+      <Footer/>
     </>
   )
 }
